@@ -852,7 +852,13 @@ footer .interior .bookingInfo h3 {
     }
     /* Schedule page (table font has to get really small) */
 
+    .table .tableContainer .tableBody .tableTop h2 {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
     .table .tableContainer .tableBody h2 {
-        font-size: 0.5rem;
+        padding: 0;
+        font-size: 0.8rem;
     }
 }
