@@ -36,7 +36,6 @@
     /* border: 1px solid var(--darkTan); */
     background-color: var(--red);
     border-radius: 1rem;
-    padding: 1rem;
     box-shadow: 0 0 1rem black;
     z-index: 1;
     /* -webkit-text-stroke: 1px var(--navy); */
