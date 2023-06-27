@@ -1,3 +1,5 @@
+import changeMenu from './main.js'
+
 const months = ["January", "February", "March", "April", "May", "June","July","August","September","October","November","December"]; 
 
 const gigs = [
@@ -211,94 +213,94 @@ const gigs = [
       end: '9:30',
       address: '5805 Eiterman Rd, Dublin, OH 43016'
     },
-    { 
-      location: 'Kenyon College',
-      month: 'August',
-      day: '26',
-      start: '7:00',
-      end: '9:00',
-      address: 'Gambier, OH 43022'
-    },
-    { 
-      location: 'Lick Skillet Festival',
-      month: 'September',
-      day: '3',
-      start: 'TBA',
-      end: 'TBA',
-      address: ''
-    },
-    { 
-      location: 'Buckeye Lake Yacht Club',
-      month: 'September',
-      day: '9',
-      start: '7:00',
-      end: '10:00',
-      address: '5019 N Bank Rd, Buckeye Lake, OH 43008'
-    },
-    { 
-      location: 'Pickerington Oktoberfest',
-      month: 'September',
-      day: '15',
-      start: '6:00',
-      end: '9:00',
-      address: '89 N Center St, Pickerington, OH 43147'
-    },
-    { 
-      location: 'Pickerington Oktoberfest',
-      month: 'September',
-      day: '16',
-      start: '6:00',
-      end: '9:00',
-      address: '89 N Center St, Pickerington, OH 43147'
-    },
-    { 
-      location: 'Orr Park Rehm Gazebo, Orrville Ohio',
-      month: 'September',
-      day: '19',
-      start: '7:00',
-      end: '9:00',
-      address: '440 N Elm St, Orrville, OH 44667'
-    },
-    { 
-      location: 'Cranberry Hills Restaurant and Bar Newcomerstown Ohio',
-      month: 'September',
-      day: '22',
-      start: 'TBA',
-      end: 'TBA',
-      address: '5965 State Route 36, Newcomerstown, OH 43832'
-    },
-    { 
-      location: 'Wagner Subaru Outdoor Experience, Eastwood MetroPark',
-      month: 'September',
-      day: '24',
-      start: '2:30',
-      end: '4:30',
-      address: '1385 Harshman Rd, Dayton, OH 45431'
-    },
-    { 
-      location: 'Trillium Event Center Belpre Ohio',
-      month: 'September',
-      day: '29',
-      start: '7:00',
-      end: '9:00',
-      address: '632 Wheeling Ave, Cambridge, OH 43725'
-    },
-    { 
-      location: 'TBA',
-      month: 'September',
-      day: '30',
-      start: 'TBA',
-      end: 'TBA',
-      address: ''
-    },
-    { 
-      location: 'Waterfront Bistro - Season Finale',
-      month: 'October',
-      day: '13',
-      start: '6:00',
-      end: '9:00',
-      address: '5389 N State Route 60 NW, McConnelsville, OH 43756'
-    }
+    {
+        location: 'Bananas Party',
+        month: 'September',
+        day: '2',
+        start: 'TBA',
+        end: 'TBA',
+        address: ''
+      },
+      {
+        location: 'Keystone Pub and Patio Lewis Center',
+        month: 'September',
+        day: '9',
+        start: '7:00',
+        end: '10:00',
+        address: '6477 Pullman Dr, Lewis Center, OH 43035'
+      },
+      {
+        location: '3rd Annual Music in the Hills',
+        month: 'September',
+        day: '16',
+        start: 'TBA',
+        end: 'TBA',
+        address: ''
+      },
+      {
+        location: 'Barnesville Memorial Amphitheater benefit for State Theater project',
+        month: 'September',
+        day: '17',
+        start: 'TBA',
+        end: 'TBA',
+        address: '137 W Main St Barnesville, OH 43713'
+      },
+      {
+        location: 'Main Street Barrel House',
+        month: 'September',
+        day: '21',
+        start: '8',
+        end: '11',
+        address: '137 E Main St, Barnesville, OH 43713'
+      },
+      {
+        location: 'Barnesville Pumpkin Festival BIG STAGE',
+        month: 'September',
+        day: '23',
+        start: '8:30',
+        end: '11:00',
+        address: '113 W Main St, Barnesville, OH 43713'
+      },
+      {
+        location: 'Shuman Party',
+        month: 'September',
+        day: '24',
+        start: 'TBA',
+        end: 'TBA',
+        address: ''
+      },
+      {
+        location: 'Gulf Club of Dublin',
+        month: 'September',
+        day: '29',
+        start: '6:00',
+        end: '9:00',
+        address: '5805 Eiterman Rd, Dublin, OH 43016'
+      },
+      {
+        location: 'Historic Monroe Theatre',
+        month: 'September',
+        day: '30',
+        start: '7:00',
+        end: '9:00',
+        address: '104 North Main Street, Woodsfield, OH, United States, 43793'
+      },
+      {
+        location: 'American Legion Whitehall Ohio',
+        month: 'October',
+        day: '7',
+        start: '6',
+        end: '10',
+        address: '1117 S Hamilton Rd, Columbus, OH 43227'
+      },
+      {
+        location: 'Private Party',
+        month: 'October',
+        day: '14',
+        start: 'TBA',
+        end: 'TBA',
+        address: ''
+      }
 ];
 
 
@@ -408,12 +410,12 @@ class Entry {
     }
 }
 
-function buildCalendar() {
+export function buildCalendar() {
     entryArr = new Array(365).fill(0)
     let m = 0
     let d = 1
     for (let i = 0; i < 366; i++) {
-        newDay = new Date(`${months[m]} ${d}, ${year}`)
+        let newDay = new Date(`${months[m]} ${d}, ${year}`)
         let gig = null
         if (newDay.getMonth() != m && m + 1 != null) { //check if month is changing
             m++
@@ -442,7 +444,7 @@ function buildCalendar() {
     }
 }
 
-function findMonthLength(startPoint) {
+export function findMonthLength(startPoint) {
     entryArr.forEach((entry, index) => {
         let x = entry.findIndexToday(startPoint)
         if (x != null) {
@@ -525,6 +527,10 @@ monthList.forEach(month => {
         monthSelect.classList.add('hidden')
         findMonthLength(newDay)
     })
+})
+
+document.querySelector('.hamButton').addEventListener('click', () => {
+    changeMenu()
 })
 
 window.onload = () => {
