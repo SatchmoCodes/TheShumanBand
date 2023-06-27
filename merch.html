@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>The Shuman Band</title>
+    <script type="module" src="js/schedule.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Schedule</title>
 </head>
 <body>
+    <div class="hamburger">
+        <i class="fa fa-bars hamButton"></i>
+    </div>
+    <div class="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="merch.html">Merch</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
     <nav>
         <div class="inner">
             <a href="index.html">Home</a>
@@ -18,23 +29,109 @@
     <div class="logo">
         <img src="img/LOGO WHITE.png">
     </div>
-    <section class="merchBody">
+    <section class="events">
         <div class="sectionHead">
-            <h2>Merchandise</h2>
+            <h2>Upcoming Events</h2>
         </div>
         <div class="container">
-            <div>
-                <a href='https://rootwithus.com/collections/the-shuman-band/products/61a948e2471506001c930a6e'><img src="img/shuTeeTan.jpg"></a>
+            <div class="event">
+                <h2>Next Gig</h2>
+                <div class="inner">
+                    <div class="left">
+                        <h3 class="when"></h3>
+                        <h3 class="time"></h3>
+                    </div>
+                    <div class="right">
+                        <h3 class="where"></h3>
+                    </div>
+                </div>
             </div>
-            <div>
-                <a href='https://rootwithus.com/collections/the-shuman-band/products/61a948e2471506001c930a6c'><img src="img/shuVanTan.jpg"></a>
+            <div class="event">
+                <h2>Upcoming Gig</h2>
+                <div class="inner">
+                    <div class="left">
+                        <h3 class="when"></h3>
+                        <h3 class="time"></h3>
+                    </div>
+                    <div class="right">
+                        <h3 class="where"></h3>
+                    </div>
+                </div>
             </div>
-            <div>
-                <a href='https://rootwithus.com/products/61a9844c471506001c934597?pr_prod_strat=use_description&pr_rec_id=93d55d8e3&pr_rec_pid=7239770636450&pr_ref_pid=7239464878242&pr_seq=uniform'><img src="img/kiddogTan.jpg"></a>
+            <div class="event">
+                <h2>Upcoming Gig</h2>
+                <div class="inner">
+                    <div class="left">
+                        <h3 class="when"></h3>
+                        <h3 class="time"></h3>
+                    </div>
+                    <div class="right">
+                        <h3 class="where"></h3>
+                    </div>
+                </div>
             </div>
-            <div>
-                <a href='https://rootwithus.com/collections/the-shuman-band/products/61b22f91471506001c9d1166'><img src="img/shuTeeLongTan.jpg"></a>
+        </div>
+    </section>
+    <section class="calendar">
+        <div class="sectionHead">
+            <h2>Calendar</h2>
+        </div>
+        <div class="calendarContainer">
+            <div class="calBody">
+                <div class="monthSelect hidden">
+                    <div class="xRow">
+                        <i class="xButton fa fa-times"></i>
+                    </div>
+                    <h3 data-month="0">January</h3>
+                    <h3 data-month="1">February</h3>
+                    <h3 data-month="2">March</h3>
+                    <h3 data-month="3">April</h3>
+                    <h3 data-month="4">May</h3>
+                    <h3 data-month="5">June</h3>
+                    <h3 data-month="6">July</h3>
+                    <h3 data-month="7">August</h3>
+                    <h3 data-month="8">September</h3>
+                    <h3 data-month="9">October</h3>
+                    <h3 data-month="10">November</h3>
+                    <h3 data-month="11">December</h3>
+                </div>
+                <div class="month">
+                    <h2 class="monthChange" data-val="-1"><</h2>
+                    <h2 class="monthName"></h2>
+                    <h2 class="monthChange" data-val="1">></h2>
+                </div>
+                <div class="dayHeader">
+                    <h3>Sun</h3>
+                    <h3>Mon</h3>
+                    <h3>Tue</h3>
+                    <h3>Wed</h3>
+                    <h3>Thu</h3>
+                    <h3>Fri</h3>
+                    <h3>Sat</h3>
+                </div>
+                <div class="days">
+
+                </div>
             </div>
+        </div>
+    </section>
+    <section class="table">
+        <div class="sectionHead">
+            <h2>Full Schedule</h2>
+        </div>
+        <div class="tableContainer">
+            <div class="tableBody">
+                <div class="tableTop">
+                    <h2>Location</h2>
+                    <h2>Date</h2>
+                    <h2>Time</h2>
+                    <h2>Address</h2>
+                </div>
+                <div class="listEventHolder">
+                
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
         <div class="interior">
