@@ -1,3 +1,5 @@
+import changeMenu from './main.js'
+
 const sections = document.querySelectorAll('.loadIn');
 const options = {};
 
@@ -22,3 +24,7 @@ entries.forEach(entry => {
 sections.forEach( section => {
 observer.observe(section);
 });
+
+document.querySelector('.hamButton').addEventListener('click', () => {
+    changeMenu()
+})
