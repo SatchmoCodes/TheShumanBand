@@ -27,30 +27,6 @@
 
 /* General */
 
-.sectionHead {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    margin: auto;
-    /* border: 1px solid var(--darkTan); */
-    background-color: var(--red);
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem black;
-    z-index: 1;
-    /* -webkit-text-stroke: 1px var(--navy); */
-    color: white;
-    font-family: 'Moonshiner';
-    font-weight: normal;
-}
-
-.sectionHead h2, .sectionHead h3 {
-    text-align: center;
-    font-size: clamp(1rem, 3vw + 2rem, 6rem);
-    font-weight: normal;
-    margin-bottom: 0.4em;
-}
-
 .grayed {
     color: lightgray;
 }
@@ -85,12 +61,41 @@
     animation-delay: 0.1s;
 }
 
-/* HomePage */
-
-body {
-    margin: 0;
-    font-family: 'helvetica';
+.openMenu {
+    animation: openMenu 0.5s forwards;
 }
+
+.closeMenu {
+    animation: closeMenu 0.5s forwards
+}
+
+/* Headings */
+
+.sectionHead {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    margin: auto;
+    /* border: 1px solid var(--darkTan); */
+    background-color: var(--red);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem black;
+    z-index: 1;
+    /* -webkit-text-stroke: 1px var(--navy); */
+    color: white;
+    font-family: 'Moonshiner';
+    font-weight: normal;
+}
+
+.sectionHead h2, .sectionHead h3 {
+    text-align: center;
+    font-size: clamp(1rem, 3vw + 2rem, 6rem);
+    font-weight: normal;
+    margin-bottom: 0.4em;
+}
+
+/* Nav */
 
 nav {
     position: relative;
@@ -144,9 +149,52 @@ nav .inner:hover {
    padding-bottom: 1rem;
 }
 
-
 nav .inner a:last-of-type {
     margin-right: 10%;
+}
+
+.hamburger {
+    position: fixed;
+    width: 100%;
+    display: none;
+    z-index: 3;
+}
+
+.hamburger i {
+    display: flex;
+    justify-content: right;
+    font-size: 4rem;
+    margin-right: 2%;
+    cursor: pointer;
+}
+
+.mobileMenu {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 100vw;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(113, 112, 112, 0.95);
+    z-index: 2;
+    flex-wrap: wrap;
+}
+
+.mobileMenu a {
+    text-align: center;
+    flex-basis: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+}
+
+/* HomePage */
+
+body {
+    margin: 0;
+    font-family: 'helvetica';
 }
 
 header {
@@ -302,14 +350,13 @@ header h2:nth-of-type(3) {
 .events {
     position: relative;
     margin-top: clamp(60px, 5vw + 40px, 280px);
-    padding-bottom: 2rem;
     background-color: var(--tan);
 }
 
 .events .container {
     display: inline-block;
     margin-top: clamp(90px, 5vw + 40px, 280px);
-    margin-bottom: clamp(60px, 5vw + 40px, 280px);
+    margin-bottom: clamp(90px, 5vw + 40px, 280px);
     width: 100%;
 }
 
@@ -505,7 +552,7 @@ header h2:nth-of-type(3) {
     position: absolute;
     width: 100%;
     text-align: right;
-    padding: 1em;
+    padding: 1%;
     font-size: 2rem;
 }
 
@@ -566,6 +613,7 @@ header h2:nth-of-type(3) {
     align-items: center;
     padding: 1rem;
     font-size: clamp(0.5rem, 1vw + 1rem, 2rem);
+    font-weight: normal;
 }
 
 /* Merch */
@@ -790,7 +838,37 @@ footer .interior .bookingInfo h3 {
     }
 }
 
+@keyframes openMenu {
+    0% {
+        display: flex;
+        left: 100vw;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes closeMenu {
+    0% {
+        display: flex;
+        left: 0;
+    }
+    100% {
+        left: 100vw;
+    }
+}
+
 @media screen and (max-width: 1000px) {
+
+    /* General */
+
+    nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
 
     .sectionHead {
         width: 80%;
