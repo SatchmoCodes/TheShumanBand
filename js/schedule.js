@@ -353,6 +353,7 @@ class Entry {
         let increment = 0 //tracks to make sure entire row is filled with squares
         while (startIndex <= finalIndex || increment % 7 != 0) {
             let day = document.createElement('div')
+            day.dataset.month = months[entryArr[startIndex].date.getMonth()]
             let dayNumber = document.createElement('h3')
             let gigInfo = document.createElement('h3')
             let gigTime = document.createElement('h3')
@@ -367,6 +368,8 @@ class Entry {
                 }
                 if (entryArr[startIndex].gig != null) {
                     day.classList.add('eventToday')
+                    day.addEventListener('click', listInfo)
+                    day.dataset.address = entryArr[startIndex].gig.address
                     gigInfo.innerText = entryArr[startIndex].gig.location
                     if (entryArr[startIndex].gig.start == 'TBA') {
                         gigTime.innerText = 'TBA'
@@ -486,7 +489,7 @@ export function findMonthLength(startPoint) {
 let calendarBody = document.querySelector('.days')
 let calendarMonth = document.querySelector('.monthName')
 let monthChange = document.querySelectorAll('.monthChange')
-let xButton = document.querySelector('.xButton')
+let xButton = document.querySelectorAll('.xButton')
 let monthSelect = document.querySelector('.monthSelect')
 let monthName = document.querySelector('.monthName')
 let monthList = document.querySelectorAll('.monthSelect h3')
@@ -494,6 +497,7 @@ let when = document.querySelectorAll('.when')
 let where = document.querySelectorAll('.where')
 let time = document.querySelectorAll('.time')
 let listEventHolder = document.querySelector('.listEventHolder')
+let eventModal = document.querySelector('.eventModal')
 
 let entryArr = []
 let year = 2023
@@ -515,10 +519,14 @@ monthChange.forEach(btn => {
 monthName.addEventListener('click', () => {
     monthSelect.classList.remove('hidden')
 })
-
-xButton.addEventListener('click', () => {
-    monthSelect.classList.add('hidden')
+xButton.forEach(btn => {
+    btn.addEventListener('click', (event) => {
+        event.target.parentElement.parentElement.classList.contains('monthSelect') ? monthSelect.classList.add('hidden') : eventModal.close()
+    })
 })
+// xButton.addEventListener('click', () => {
+    
+// })
 
 monthList.forEach(month => {
     month.addEventListener('click', (event) => {
@@ -538,3 +546,15 @@ window.onload = () => {
     findMonthLength(today)
 }
 
+function listInfo(e) {
+    let event
+    console.log(e.target.tagName)
+    e.target.tagName == 'H3' ? event = e.target.parentElement : event = e.target
+    let eventDate = event.dataset.month + ' ' + event.querySelectorAll('h3')[0].innerText
+    console.log(event)
+    eventModal.querySelectorAll('h2')[0].innerText = eventDate
+    eventModal.querySelectorAll('h2')[1].innerText = event.querySelectorAll('h3')[1].innerText
+    eventModal.querySelectorAll('h2')[2].innerText = event.querySelectorAll('h3')[2].innerText
+    eventModal.querySelectorAll('h2')[0].innerText != 'Private Party' ? eventModal.querySelectorAll('h2')[3].innerText = event.dataset.address : eventModal.querySelectorAll('h2')[3].innerText = ''
+    eventModal.showModal()
+}
