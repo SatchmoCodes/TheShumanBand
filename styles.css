@@ -734,6 +734,7 @@ header h2:nth-of-type(3) {
     border: none;
     background-color: rgb(50, 50, 50, 0);
     outline: none;
+    padding: 0;
 }
 
 .imageModal::-webkit-scrollbar {
@@ -761,6 +762,7 @@ header h2:nth-of-type(3) {
     display: block;
     max-width: 100%;
     height: auto;
+    max-height: 85vh;
     margin: auto;
 }
 
