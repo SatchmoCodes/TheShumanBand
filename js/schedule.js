@@ -353,12 +353,12 @@ class Entry {
         let increment = 0 //tracks to make sure entire row is filled with squares
         while (startIndex <= finalIndex || increment % 7 != 0) {
             let day = document.createElement('div')
-            day.dataset.month = months[entryArr[startIndex].date.getMonth()]
             let dayNumber = document.createElement('h3')
             let gigInfo = document.createElement('h3')
             let gigTime = document.createElement('h3')
             entryArr[startIndex] ? dayNumber.innerText = entryArr[startIndex].date.getDate() : dayNumber.innerText = ''
             if (entryArr[startIndex]) {
+                day.dataset.month = months[entryArr[startIndex].date.getMonth()]
                 if (entryArr[startIndex].date.getMonth() != currentMonth) {
                     dayNumber.classList.add('grayed')
                 }
@@ -386,6 +386,10 @@ class Entry {
             startIndex++
             increment++
         }
+        let days = document.querySelectorAll('.days div')
+        days.forEach(day => {
+            day.classList.add('fadeFast')
+        })
     }
     fullEventListBuilder() {
         let location = document.createElement('h2')
@@ -414,7 +418,7 @@ class Entry {
 }
 
 export function buildCalendar() {
-    entryArr = new Array(365).fill(0)
+    entryArr = new Array
     let m = 0
     let d = 1
     for (let i = 0; i < 366; i++) {
@@ -556,5 +560,6 @@ function listInfo(e) {
     eventModal.querySelectorAll('h2')[1].innerText = event.querySelectorAll('h3')[1].innerText
     eventModal.querySelectorAll('h2')[2].innerText = event.querySelectorAll('h3')[2].innerText
     eventModal.querySelectorAll('h2')[1].innerText != 'Private Party' ? eventModal.querySelectorAll('h2')[3].innerText = event.dataset.address : eventModal.querySelectorAll('h2')[3].innerText = ''
+    eventModal.classList.add('expand')
     eventModal.showModal()
 }
