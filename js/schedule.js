@@ -555,6 +555,6 @@ function listInfo(e) {
     eventModal.querySelectorAll('h2')[0].innerText = eventDate
     eventModal.querySelectorAll('h2')[1].innerText = event.querySelectorAll('h3')[1].innerText
     eventModal.querySelectorAll('h2')[2].innerText = event.querySelectorAll('h3')[2].innerText
-    eventModal.querySelectorAll('h2')[0].innerText != 'Private Party' ? eventModal.querySelectorAll('h2')[3].innerText = event.dataset.address : eventModal.querySelectorAll('h2')[3].innerText = ''
+    eventModal.querySelectorAll('h2')[1].innerText != 'Private Party' ? eventModal.querySelectorAll('h2')[3].innerText = event.dataset.address : eventModal.querySelectorAll('h2')[3].innerText = ''
     eventModal.showModal()
 }
