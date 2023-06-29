@@ -51,9 +51,16 @@ dialog {
     opacity: 1 !important;
 }
 
+.expand {
+    animation: expand 0.5s forwards;
+}
+
+.fadeFast {
+    animation: fadeFast 0.75s forwards;
+}
+
 .slideRight {
     animation: floatIn 1s forwards;
-    
 }
 
 .dropDown {
@@ -629,6 +636,13 @@ header h2:nth-of-type(3) {
     font-weight: normal;
 }
 
+.eventModal {
+    border-color: var(--red);
+    background-color: var(--tan);
+    scale: 0.5;
+    transition: scale 1s;
+}
+
 .eventModal .xRow {
     text-align: right;
     font-size: 2rem;
@@ -932,6 +946,25 @@ footer .interior .bookingInfo h3 {
     }
     100% {
         left: 100vw;
+    }
+}
+
+@keyframes expand {
+    0% {
+        scale: 0.5;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes fadeFast {
+    0% {
+        color: white;
+        background-color: white;
+    }
+    100% {
+        color: black;
     }
 }
 
