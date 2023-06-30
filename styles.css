@@ -360,7 +360,7 @@ header h2:nth-of-type(3) {
 /* Schedule Page */
 
 .logo img {
-    width: clamp(200px, 10vw + 200px, 40%);
+    width: clamp(200px, 15vw + 250px, 50%);
 }
 
 .events {
@@ -984,6 +984,12 @@ footer .interior .bookingInfo h3 {
         width: 80%;
     }
 
+    .logo img {
+        display: block;
+        margin: auto;
+        min-width: 50%;
+    }
+
     /* Index */
     .testimonials .container {
         display: inline-block;
@@ -1024,7 +1030,6 @@ footer .interior .bookingInfo h3 {
     .imageModal {
         padding: 0;
     }
-
 }
 
 @media screen and (max-width: 550px) {
