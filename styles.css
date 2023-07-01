@@ -193,9 +193,11 @@ nav .inner a:last-of-type {
     left: 100vw;
     width: 100%;
     height: 100vh;
-    background-color: rgba(113, 112, 112, 0.95);
+    background-color: var(--navyFaded);
     z-index: 2;
     flex-wrap: wrap;
+    font-family: 'Moonshiner';
+    backdrop-filter: blur(0.5rem);
 }
 
 .mobileMenu a {
