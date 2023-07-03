@@ -120,7 +120,7 @@ const gigs = [
     { 
       location: 'Orr Park Rehm Gazebo, Orrville Ohio',
       month: 'July',
-      day: '12',
+      day: '13',
       start: '7:00',
       end: '9:00',
       address: '440 N Elm St, Orrville, OH 44667'
@@ -149,29 +149,21 @@ const gigs = [
       end: '10:00',
       address: '907 Coshocton Ave, Mt Vernon, OH 43050'
     },
+    // { 
+    //   location: 'Retirement Party Fish Club',
+    //   month: 'July',
+    //   day: '28',
+    //   start: 'TBA',
+    //   end: 'TBA',
+    //   address: ''
+    // },
     { 
-      location: 'Retirement Party Fish Club',
+      location: 'Alzheimers Benefit, Monroe County Country Club',
       month: 'July',
       day: '28',
       start: 'TBA',
       end: 'TBA',
-      address: ''
-    },
-    { 
-      location: 'Alzheimers Benefit, Monroe County Country Club',
-      month: 'July',
-      day: '29',
-      start: 'TBA',
-      end: 'TBA',
-      address: ''
-    },
-    { 
-      location: 'Hold for Peloton at Fredericktown High School',
-      month: 'August',
-      day: '6',
-      start: 'TBA',
-      end: 'TBA',
-      address: '111 Stadium Dr, Fredericktown, OH 43019'
+      address: '52936 OH-26, Beallsville, OH 43716'
     },
     { 
       location: 'Seneca Lake Sportsmans Club Poker Float',
@@ -179,7 +171,7 @@ const gigs = [
       day: '12',
       start: 'TBA',
       end: 'TBA',
-      address: ''
+      address: '53704 Seneca Lake Rd, Senecaville, OH 43780'
     },
     { 
       location: 'Holding for Mount Vernon Music and Arts Festival',
@@ -235,7 +227,7 @@ const gigs = [
         day: '16',
         start: 'TBA',
         end: 'TBA',
-        address: ''
+        address: '32320 Leatherwood Rd, Barnesville, OH 43713'
       },
       {
         location: 'Barnesville Memorial Amphitheater benefit for State Theater project',
