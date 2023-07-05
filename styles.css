@@ -182,6 +182,7 @@ nav .inner a:last-of-type {
     font-size: 4rem;
     margin-right: 2%;
     cursor: pointer;
+    width: max-content;
 }
 
 .mobileMenu {
@@ -980,7 +981,8 @@ footer .interior .bookingInfo h3 {
     }
 
     .hamburger {
-        display: block;
+        display: flex;
+        justify-content: right;
     }
 
     .sectionHead {
