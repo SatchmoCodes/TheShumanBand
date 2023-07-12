@@ -389,7 +389,7 @@ header h2:nth-of-type(3) {
     box-shadow: 0 0 1rem black;
     opacity: 0;
     padding: 1rem;
-    transition: width, padding;
+    transition: width, scale;
     transition-duration: 0.5s;
 }
 
@@ -406,7 +406,7 @@ header h2:nth-of-type(3) {
 
 .event:hover {
     background-color: white;
-    padding: 2rem;
+    scale: 1.1;
     width: clamp(10rem, 25rem + 30vw, 80%);
 }
 
@@ -523,7 +523,7 @@ header h2:nth-of-type(3) {
     display: flex;
     justify-content: left;
     align-items: top;
-    border: 1px solid black;
+    border: 1px solid rgb(56, 56, 56);
     text-align: center;
     padding: 3%;
     flex-wrap: wrap;
@@ -534,6 +534,7 @@ header h2:nth-of-type(3) {
 .calendar .calendarContainer .days div:hover {
     cursor: pointer;
     opacity: 75%;
+    outline: 2px solid red;
 }
 
 .calendar .calendarContainer .days div h3 {
