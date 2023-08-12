@@ -4,6 +4,12 @@
     --darkTan: rgb(181,169,117);
     --navy:  rgb(11,19,51,1);
     --navyFaded:  rgb(11,19,51,.7);
+
+    --red: rgb(84,41,0);
+    --silver: linear-gradient(90deg, rgba(127,151,155,1) 0%, rgba(204,204,204,1) 75%);
+    --orange: linear-gradient(270deg, rgba(208,116,8,1) 0%, rgba(252,176,34,1) 100%);
+    --navy: black;
+    --orangeFaded: linear-gradient(270deg, rgb(213, 142, 60) 0%, rgb(247, 186, 74) 100%);
     /* --red: rgb(225,215,179);
     --tan: rgb(139,22,28); */
 }
@@ -121,7 +127,7 @@ nav {
 
 nav .inner {
     position: fixed;
-    background-color: var(--navyFaded);
+    background: rgba(255, 255, 255, 0.5);
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     text-align: right;
@@ -134,7 +140,7 @@ nav .inner {
 
 nav .inner a {
     position: relative;
-    color: white;
+    color: black;
     display: inline-block;
     margin-left: 1%;
     margin-right: 1%;
@@ -150,7 +156,7 @@ nav .inner a:before {
     bottom: -10%;
     height: 6px;
     width: 0;
-    background: white;
+    background: black;
     border-radius: 50px;
     transition: width 0.3s ease-in-out;
 }
@@ -160,7 +166,7 @@ nav .inner a:hover:before {
 }
 
 nav .inner:hover {
-   background-color: var(--navy);
+    background: rgba(255, 255, 255, 0.7);
    padding-top: 1rem;
    padding-bottom: 1rem;
 }
@@ -214,10 +220,11 @@ nav .inner a:last-of-type {
 body {
     margin: 0;
     font-family: 'helvetica';
+    background-color: black;
 }
 
 header {
-    height: 95vh;
+    height: 100vh;
     background-color: var(--tan);
     z-index: 1;
 }
@@ -231,6 +238,12 @@ header .container {
     height: 100%;
     text-align: center;
     flex-wrap: wrap;
+    background-color: black;
+}
+
+header .container img {
+    max-width: 80%;
+    animation: grow 1.5s forwards;
 }
 
 header h1 {
@@ -267,6 +280,7 @@ header h2:nth-of-type(3) {
 
 .about {
     position: relative; 
+    background: var(--silver);
 }
 
 .about .content {
@@ -302,7 +316,7 @@ header h2:nth-of-type(3) {
 
 .testimonials {
     position: relative;
-    background-color: var(--tan);
+    background: var(--orange);
 }
 
 .testimonials .container {
@@ -363,13 +377,13 @@ header h2:nth-of-type(3) {
 /* Schedule Page */
 
 .logo img {
-    width: clamp(200px, 15vw + 250px, 50%);
+    width: clamp(200px, 50vw + 300px, 75%);
 }
 
 .events {
     position: relative;
     margin-top: clamp(60px, 5vw + 40px, 280px);
-    background-color: var(--tan);
+    background: var(--silver);
 }
 
 .events .container {
@@ -587,7 +601,7 @@ header h2:nth-of-type(3) {
 
 .table {
     position: relative;
-    background-color: var(--tan);
+    background: var(--silver);
 }
 
 .table .tableContainer {
@@ -623,7 +637,7 @@ header h2:nth-of-type(3) {
 }
 
 .table .tableContainer .tableBody .listEvent:nth-child(even) {
-    background-color: var(--darkTan);
+    background: var(--orange);
 }
 
 .table .tableContainer .tableBody .tableTop {
@@ -695,6 +709,16 @@ header h2:nth-of-type(3) {
     gap: 1rem;
     flex-wrap: wrap;
     margin-bottom: 1rem;
+}
+
+.images {
+    margin-top: 5%;
+    padding-top: 2%;
+    background: var(--silver);
+}
+
+.topRow {
+    margin-top: 2%;
 }
 
 .topRow img {
@@ -877,7 +901,7 @@ footer .interior .bookingInfo h3 {
 .logo {
     display: inline-block;
     margin-top: clamp(60px, 5vw + 2em, 120px);
-    margin-left: 2%;
+    text-align: center;
 }
 
 @keyframes fadeDown {
@@ -970,6 +994,21 @@ footer .interior .bookingInfo h3 {
     }
     100% {
         color: black;
+    }
+}
+
+@keyframes grow {
+    0% {
+        scale: 0.5;
+        opacity: 0;
+    }
+    50% {
+        scale: 1.1; 
+        opacity: 50%;
+    }
+    100% {
+        scale: 1;
+        opacity: 100%;
     }
 }
 
