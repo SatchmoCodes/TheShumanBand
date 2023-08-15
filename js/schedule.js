@@ -1,6 +1,8 @@
 import changeMenu from './main.js'
 
 const months = ["January", "February", "March", "April", "May", "June","July","August","September","October","November","December"]; 
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
 
 const gigs = [
     {
@@ -547,8 +549,11 @@ function listInfo(e) {
     console.log(e.target.tagName)
     e.target.tagName == 'H3' ? event = e.target.parentElement : event = e.target
     let eventDate = event.dataset.month + ' ' + event.querySelectorAll('h3')[0].innerText
+    let date = new Date(eventDate + ' ' + year)
+    console.log(date)
+    let day = days[date.getDay()]
     console.log(event)
-    eventModal.querySelectorAll('h2')[0].innerText = eventDate
+    eventModal.querySelectorAll('h2')[0].innerText = day + ', ' + eventDate
     eventModal.querySelectorAll('h2')[1].innerText = event.querySelectorAll('h3')[1].innerText
     eventModal.querySelectorAll('h2')[2].innerText = event.querySelectorAll('h3')[2].innerText
     eventModal.querySelectorAll('h2')[1].innerText != 'Private Party' ? eventModal.querySelectorAll('h2')[3].innerText = event.dataset.address : eventModal.querySelectorAll('h2')[3].innerText = ''
