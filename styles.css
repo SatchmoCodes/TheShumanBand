@@ -46,10 +46,11 @@ dialog {
 
 .today {
     background-color: aqua !important;
+    border: 1px solid aqua !important;
 }
 
 .eventToday {
-    background-color: lightgreen;
+    background: var(--orange);
 }
 
 .hidden {
@@ -405,7 +406,7 @@ header h2:nth-of-type(3) {
     margin: auto;
     text-align: left;
     margin-bottom: 2%;
-    background: var(--silver);
+    background: var(--orange);
     border: 1px solid black;
     box-shadow: 0 0 1rem black;
     opacity: 0;
@@ -423,6 +424,10 @@ header h2:nth-of-type(3) {
     font-size: clamp(1rem, 1.5vw + 1rem, 4rem);
     margin-left: 1%;
     font-weight: 500;
+}
+
+.events .event .right h3 {
+    text-align: right;
 }
 
 .event:hover {
@@ -471,7 +476,7 @@ header h2:nth-of-type(3) {
 }
 
 .calendar {
-    background: var(--orange);
+    background: black;
 }
 
 .calendar .calendarContainer {
