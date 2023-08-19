@@ -195,8 +195,8 @@ const gigs = [
       location: 'Chubbys Sports Bar and Grill Columbus Ohio',
       month: 'August',
       day: '19',
-      start: '7',
-      end: '10',
+      start: '7:00',
+      end: '10:00',
       address: '1846 Hard Rd, Columbus, OH 43235'
     },
     { 
