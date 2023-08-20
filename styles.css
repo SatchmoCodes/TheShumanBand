@@ -248,7 +248,8 @@ header .container {
 }
 
 header .container img {
-    max-width: 80%;
+    width: 80%;
+    max-width: 2000px;
     animation: grow 1.5s forwards;
 }
 
