@@ -463,7 +463,7 @@ header h2:nth-of-type(3) {
 
 .events .event .inner .left {
     display: flex;
-    flex-basis: 25%;
+    flex-basis: 35%;
     flex-direction: column;
     justify-content: space-around;
 }
