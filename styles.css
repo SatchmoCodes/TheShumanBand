@@ -928,6 +928,7 @@ footer .interior .bookingInfo h3 {
     display: inline-block;
     margin-top: clamp(60px, 5vw + 2em, 120px);
     text-align: center;
+    width: 100%;
 }
 
 @keyframes fadeDown {
