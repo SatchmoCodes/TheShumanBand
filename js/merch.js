@@ -7,8 +7,9 @@ document.querySelector('.hamButton').addEventListener('click', () => {
 document.querySelectorAll('.shirtLink').forEach(e => {
     e.addEventListener('click', () => {
         let url = e.dataset.link
-        if (window.confirm("This link will take you to rootwithus.com, an affiliated Merch Store. Would you like to continue?")) {
-            window.open(url)
-        }
+        // if (window.confirm("This link will take you to rootwithus.com, an affiliated Merch Store. Would you like to continue?")) {
+        //     window.open(url)
+        // }
+        window.open(url)
     })
 })
