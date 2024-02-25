@@ -498,7 +498,7 @@ let listEventHolder = document.querySelector('.listEventHolder')
 let eventModal = document.querySelector('.eventModal')
 
 let entryArr = []
-let year = 2023
+let year = 2024
 let today = new Date()
 let completed = false //boolean to check if event list should be set
 
