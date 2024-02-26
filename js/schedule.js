@@ -5,296 +5,137 @@ const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
 
 
 const gigs = [
-    {
-        location: 'Keystone Pub and Patio',
-        address: '1081 Gemini Pl, Columbus, OH 43240',
-        start: '10:00',
-        end: '1:00',
-        month: 'March',
-        day: '17'
-    },
-    {
-        location: 'Gulf Club of Dublin',
-        address: '5805 Eiterman Rd, Dublin, OH 43016',
-        start: '6:00',
-        end: '9:00',
-        month: 'May',
-        day: '26'
-    },
-    {
-        location: 'BW3',
-        address: '2386 Taylor Square Dr, Reynoldsburg, OH 43068',
-        start: '7:00',
-        end: '10:00',
-        month: 'June',
-        day: '1'
-    },
-    {
-        location: 'Keystone Pub and Patio',
-        address: '6477 Pullman Dr, Lewis Center, OH 43035',
-        start: '7:00',
-        end: '10:00',
-        month: 'June',
-        day: '3'
-    },
-    {
-        location: 'Buckeye Lake Yacht Club',
-        address: '5019 N Bank Rd, Buckeye Lake, OH 43008',
-        start: '7:00',
-        end: '10:00',
-        month: 'June',
-        day: '9'
-    },
-    {
-        location: 'Private Party',
-        month: 'June',
-        day: '10'
-    },
-    {
-        location: 'BW3 Mount Vernon',
-        address: '907 Coshocton Ave, Mt Vernon, OH 43050',
-        start: '7:00',
-        end: '10:00',
-        month: 'June',
-        day: '15'
-    },
-    {
-        location: 'NorthStar Golf Club',
-        address: '907 Coshocton Ave, Mt Vernon, OH 43050',
-        start: '6:00',
-        end: '10:00',
-        month: 'June',
-        day: '16'
-    },
-    {
-        location: 'The Pub',
-        address: '22001 Coshocton Ave, Howard, OH 43028',
-        start: '8:30',
-        end: '11:30',
-        month: 'June',
-        day: '17'
-    },
-    {
-        location: 'Private Party',
-        month: 'June',
-        day: '21'
-    },
-    {
-        location: 'Golf Club of Dublin',
-        address: '5805 Eiterman Rd, Dublin, OH 43016',
-        start: '6:30',
-        end: '9:30',
-        month: 'June',
-        day: '23'
-    },
-    {
-        location: 'Lick Skillet Festival',
-        address: '',
-        start: 'TBA',
-        end: 'TBA',
-        month: 'June',
-        day: '24'
-    },
-    {
-        location: 'Barnesville Memorial Amphitheater benefit for State Theater project',
-        month: 'June',
-        day: '25',
-        start: '5:00',
-        end: '7:00',
-        address: '137 W Main St Barnesville, OH 43713'
-    },
-    { 
-      location: 'BW3 Taylor Square',
-      month: 'July',
-      day: '6',
-      start: 'TBA',
-      end: 'TBA',
-      address: '2386 Taylor Square Dr, Reynoldsburg, OH 43068'
-    },
-    { 
-      location: 'Epworth Park Chautauqua Festival',
-      month: 'July',
-      day: '8',
-      start: '6:00',
-      end: '8:00',
-      address: '211 Virginia St, Bethesda, OH 43719'
-    },
-    { 
-      location: 'Orr Park Rehm Gazebo, Orrville Ohio',
-      month: 'July',
-      day: '13',
-      start: '7:00',
-      end: '9:00',
-      address: '440 N Elm St, Orrville, OH 44667'
-    },
-    { 
-      location: 'NorthStar Golf Club',
-      month: 'July',
-      day: '21',
-      start: 'TBA',
-      end: 'TBA',
-      address: '1150 Wilson Rd, Sunbury, OH 43074'
-    },
-    { 
-      location: 'Keystone Pub and Patio Lewis Center',
-      month: 'July',
-      day: '22',
-      start: '7:00',
-      end: '10:00',
-      address: '6477 Pullman Dr, Lewis Center, OH 43035'
-    },
-    { 
-      location: 'BW3 Mount Vernon',
-      month: 'July',
-      day: '27',
-      start: '7:00',
-      end: '10:00',
-      address: '907 Coshocton Ave, Mt Vernon, OH 43050'
-    },
-    // { 
-    //   location: 'Retirement Party Fish Club',
-    //   month: 'July',
-    //   day: '28',
-    //   start: 'TBA',
-    //   end: 'TBA',
-    //   address: ''
-    // },
-    { 
-      location: 'Alzheimers Benefit, Monroe County Country Club',
-      month: 'July',
-      day: '28',
-      start: 'TBA',
-      end: 'TBA',
-      address: '52936 OH-26, Beallsville, OH 43716'
-    },
-    { 
-      location: 'Seneca Lake Sportsmans Club Poker Float',
-      month: 'August',
-      day: '12',
-      start: 'TBA',
-      end: 'TBA',
-      address: '53704 Seneca Lake Rd, Senecaville, OH 43780'
-    },
-    { 
-      location: 'Holding for Mount Vernon Music and Arts Festival',
-      month: 'August',
-      day: '13',
-      start: 'TBA',
-      end: 'TBA',
-      address: 'Mt Vernon, OH 43050'
-    },
-    { 
-      location: 'BW3 Mount Vernon',
-      month: 'August',
-      day: '17',
-      start: '7:00',
-      end: '10:00',
-      address: '907 Coshocton Ave, Mt Vernon, OH 43050'
-    },
-    { 
-      location: 'Chubbys Sports Bar and Grill Columbus Ohio',
-      month: 'August',
-      day: '19',
-      start: '7:00',
-      end: '10:00',
-      address: '1846 Hard Rd, Columbus, OH 43235'
-    },
-    { 
-      location: 'Gulf Club of Dublin',
-      month: 'August',
-      day: '25',
-      start: '6:30',
-      end: '9:30',
-      address: '5805 Eiterman Rd, Dublin, OH 43016'
-    },
-    {
-        location: 'Bananas Party',
-        month: 'September',
-        day: '2',
-        start: 'TBA',
-        end: 'TBA',
-        address: ''
-      },
-      {
-        location: 'Keystone Pub and Patio Lewis Center',
-        month: 'September',
-        day: '9',
-        start: '7:00',
-        end: '10:00',
-        address: '6477 Pullman Dr, Lewis Center, OH 43035'
-      },
-      {
-        location: '3rd Annual Music in the Hills',
-        month: 'September',
-        day: '16',
-        start: 'TBA',
-        end: 'TBA',
-        address: '32320 Leatherwood Rd, Barnesville, OH 43713'
-      },
-      {
-        location: 'Barnesville Memorial Amphitheater benefit for State Theater project',
-        month: 'September',
-        day: '17',
-        start: 'TBA',
-        end: 'TBA',
-        address: '137 W Main St Barnesville, OH 43713'
-      },
-      {
-        location: 'Main Street Barrel House',
-        month: 'September',
-        day: '21',
-        start: '8',
-        end: '11',
-        address: '137 E Main St, Barnesville, OH 43713'
-      },
-      {
-        location: 'Barnesville Pumpkin Festival BIG STAGE',
-        month: 'September',
-        day: '23',
-        start: '8:30',
-        end: '11:00',
-        address: '113 W Main St, Barnesville, OH 43713'
-      },
-      {
-        location: 'Shuman Party',
-        month: 'September',
-        day: '24',
-        start: 'TBA',
-        end: 'TBA',
-        address: ''
-      },
-      {
-        location: 'Gulf Club of Dublin',
-        month: 'September',
-        day: '29',
-        start: '6:00',
-        end: '9:00',
-        address: '5805 Eiterman Rd, Dublin, OH 43016'
-      },
-      {
-        location: 'Historic Monroe Theatre',
-        month: 'September',
-        day: '30',
-        start: '7:00',
-        end: '9:00',
-        address: '104 North Main Street, Woodsfield, OH, United States, 43793'
-      },
-      {
-        location: 'American Legion Whitehall Ohio',
-        month: 'October',
-        day: '7',
-        start: '6',
-        end: '10',
-        address: '1117 S Hamilton Rd, Columbus, OH 43227'
-      },
-      {
-        location: 'Private Party',
-        month: 'October',
-        day: '14',
-        start: 'TBA',
-        end: 'TBA',
-        address: ''
-      }
+  {
+    date: 'May 31',
+    location: 'Golf Club of Dublin',
+    start: '6:00',
+    end: '9:00',
+    month: 'May',
+    day: '31',
+  },
+  {
+    date: 'June 1',
+    location: 'Private Party',
+    month: 'June',
+    day: '1',
+  },
+  {
+    date: 'June 6',
+    location: 'BW3 Taylor Square',
+    start: '6:00',
+    end: '9:00',
+    month: 'June',
+    day: '6',
+  },
+  {
+    date: 'June 20',
+    location: 'BW3 MOUNT VERNON',
+    start: '6:00',
+    end: '9:00',
+    month: 'June',
+    day: '20',
+  },
+  {
+    date: 'June 21',
+    location: 'Front Porch Concert Series',
+    start: '6:00',
+    end: '9:00',
+    month: 'June',
+    day: '21',
+  },
+  {
+    date: 'June 22',
+    location: 'Private Party',
+    month: 'June',
+    day: '22',
+  },
+  {
+    date: 'July 4',
+    location: 'BW3 Taylor Square',
+    start: '6:00',
+    end: '9:00',
+    month: 'July',
+    day: '4',
+  },
+  {
+    date: 'July 13',
+    location: 'Epworth Park Chataqua Festival',
+    start: '6:00',
+    end: '8:00',
+    month: 'July',
+    day: '13',
+  },
+  {
+    date: 'July 25',
+    location: 'BW3 MOUNT VERNON',
+    start: '6:00',
+    end: '9:00',
+    month: 'July',
+    day: '25',
+  },
+  {
+    date: 'July 26',
+    location: 'Golf Club of Dublin',
+    start: '6:00',
+    end: '9:00',
+    month: 'July',
+    day: '26',
+  },
+  {
+    date: 'August 6',
+    location: 'National Night Out Fredericktown',
+    time: 'TBA',
+    month: 'August',
+    day: '6',
+  },
+  {
+    date: 'August 11',
+    location: 'MOUNT VERNON Music and Arts',
+    time: 'TBA',
+    month: 'August',
+    day: '11',
+  },
+  {
+    date: 'August 15',
+    location: 'BW3 MOUNT VERNON',
+    start: '6:00',
+    end: '9:00',
+    month: 'August',
+    day: '15',
+  },
+  {
+    date: 'September 21',
+    location: 'Music in the Hills',
+    start: '6:00',
+    end: '9:00',
+    month: 'September',
+    day: '21',
+  },
+  // Separate objects for each individual day within the range
+  {
+    date: 'September 26',
+    location: 'Barnesville Pumpkin Festival',
+    month: 'September',
+    day: '26',
+  },
+  {
+    date: 'September 27',
+    location: 'Barnesville Pumpkin Festival',
+    month: 'September',
+    day: '27',
+  },
+  {
+    date: 'September 28',
+    location: 'Barnesville Pumpkin Festival',
+    month: 'September',
+    day: '28',
+  },
+  {
+    date: 'September 29',
+    location: 'Annual Shuman Party on the Farm',
+    month: 'September',
+    day: '29',
+  },
 ];
 
 
