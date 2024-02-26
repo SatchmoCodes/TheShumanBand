@@ -84,16 +84,18 @@ const gigs = [
   {
     location: 'National Night Out Fredericktown',
     address: 'Fredericktown Square',
-    time: 'TBA',
     month: 'August',
     day: '6',
+    start: 'TBA',
+    end: 'TBA',
   },
   {
     location: 'MOUNT VERNON Music and Arts',
     address: 'Mount Vernon Square',
-    time: 'TBA',
     month: 'August',
     day: '11',
+    start: 'TBA',
+    end: 'TBA',
   },
   {
     location: 'BW3 MOUNT VERNON',
