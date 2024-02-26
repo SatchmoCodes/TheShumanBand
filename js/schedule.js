@@ -114,29 +114,37 @@ const gigs = [
     day: '21',
   },
   // Separate objects for each individual day within the range
-  {
+{
     location: 'Barnesville Pumpkin Festival',
     address: '113 W Main St, Barnesville, OH 43713',
     month: 'September',
     day: '26',
+    start: 'TBA',
+    end: 'TBA',
   },
   {
     location: 'Barnesville Pumpkin Festival',
     address: '113 W Main St, Barnesville, OH 43713',
     month: 'September',
     day: '27',
+    start: 'TBA',
+    end: 'TBA',
   },
   {
     location: 'Barnesville Pumpkin Festival',
     address: '113 W Main St, Barnesville, OH 43713',
     month: 'September',
     day: '28',
+    start: 'TBA',
+    end: 'TBA',
   },
   {
     location: 'Annual Shuman Party on the Farm',
     address: '',
     month: 'September',
     day: '29',
+    start: 'TBA',
+    end: 'TBA',
   },
 ];
 
