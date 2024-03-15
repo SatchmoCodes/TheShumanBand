@@ -66,6 +66,14 @@ const gigs = [
     day: '13',
   },
   {
+    location: 'Alzheimers Benefit Monroe Country Club',
+    address: '52936 OH-26, Beallsville, OH 43716',
+    start: 'TBA',
+    end: 'TBA',
+    month: 'July',
+    day: '13',
+  },
+  {
     location: 'BW3 MOUNT VERNON',
     address: '907 Coshocton Ave, Mt Vernon, OH 43050',
     start: '6:00',
@@ -80,6 +88,14 @@ const gigs = [
     end: '9:00',
     month: 'July',
     day: '26',
+  },
+  {
+    location: 'American Legion WhiteHall',
+    address: '1117 S Hamilton Rd, Columbus, OH 43227',
+    month: 'August',
+    day: '2',
+    start: '6:00',
+    end: '9:00',
   },
   {
     location: 'National Night Out Fredericktown',
@@ -113,14 +129,22 @@ const gigs = [
     month: 'September',
     day: '21',
   },
+  {
+    location: 'Music in the Hills',
+    address: '32320 Leatherwood Rd, Barnesville, OH 43713',
+    month: 'September',
+    day: '21',
+    start: '6:00',
+    end: '9:00',
+  },
   // Separate objects for each individual day within the range
 {
     location: 'Barnesville Pumpkin Festival',
     address: '113 W Main St, Barnesville, OH 43713',
     month: 'September',
     day: '26',
-    start: 'TBA',
-    end: 'TBA',
+    start: '8:00',
+    end: '11:00',
   },
   {
     location: 'Barnesville Pumpkin Festival',
